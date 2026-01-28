@@ -72,3 +72,24 @@ sudo apt install -y -V libarrow-dev libparquet-dev
 ```
 
 This has been tested on Ubuntu 24.04.
+
+### Building using CMake
+
+First set up a build directory with the following command:
+
+```shell
+cmake -B build
+```
+
+Then build the project using:
+
+```shell
+cmake --build build
+```
+
+This builds an executable ``parquet_summary`` in the ``build`` directory. Which can now be called on your parquet file
+of need:
+
+```shell
+build/parquet_summary your_file.parquet
+```
